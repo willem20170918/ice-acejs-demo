@@ -1,0 +1,60 @@
+@import "src/theme/global.module";
+$active-color: #2cabd4;
+$border-color: rgba(204, 204, 204, 0.55);
+
+// 编程容器
+.aceEditorBox{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+
+// 编辑器头部工具条
+ul.editorTool{
+  padding: 0 10px;
+  margin: 0;
+  border-bottom: 1px solid $border-color;
+  overflow: hidden;
+  li{
+    height: 24px;
+    line-height: 24px;
+    margin-right: 10px;
+    float: left;
+    >i, >:global(.anticon), >:global(.#{$iconfont}){
+      cursor: pointer;
+      font-size: 14px;
+      &:hover{
+        color: #2cabd4;
+      }
+    }
+    &.flexRight {
+      float: right;
+    }
+    &.flexLeft {
+      //float: left;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+// 占位符
+.emptySpace{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 200px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  :global{
+    .anticon{
+      font-size: 46px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
